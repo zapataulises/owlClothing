@@ -1,0 +1,21 @@
+<h2 class="d-flex justify-content-center">Listado de Zapatillas</h2>
+<ul>
+  <li class="product">
+    <h2>{{ shoes[0].brand }}</h2>
+    <h3>{{ shoes[0].model }}</h3>
+    <img [src]="shoes[0].image" [alt]="shoes[0].model" />
+    <p>${{ shoes[0].price }}</p>
+  </li>
+  <li class="product">
+    <h2>{{ shoes[1].brand }}</h2>
+    <h3>{{ shoes[1].model }}</h3>
+    <img [src]="shoes[1].image" [alt]="shoes[1].model" />
+    <p>${{ shoes[1].price }}</p>
+  </li>
+  <li class="product">
+    <h2>{{ shoes[2].brand }}</h2>
+    <h3>{{ shoes[2].model }}</h3>
+    <img [src]="shoes[2].image" [alt]="shoes[2].model" />
+    <p>${{ shoes[2].price }}</p>
+  </li>
+</ul>
