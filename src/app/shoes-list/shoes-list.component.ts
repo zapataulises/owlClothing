@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { shoe } from './shoe';
 
 @Component({
   selector: 'app-shoes-list',
@@ -6,24 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shoes-list.component.scss'],
 })
 export class ShoesListComponent implements OnInit {
-  shoes = [
+  shoes: shoe[] = [
     {
       brand: 'Nike',
       model: "Air Max 90'",
       price: 120,
       image: 'assets/img/airm90.png',
-    },
-    {
-      brand: 'Adidas',
-      model: 'EQT',
-      price: 115,
-      image: 'assets/img/adidas.png',
+      promotion: false,
     },
     {
       brand: 'Fila',
       model: 'Venom',
-      price: 90,
+      price: 75,
       image: 'assets/img/filavenom.jpg',
+      promotion: true,
+    },
+    {
+      brand: 'Adidas',
+      model: 'EQT',
+      price: 90,
+      image: 'assets/img/adidas.png',
+      promotion: false,
     },
   ];
 

@@ -1,25 +1,30 @@
-.product {
+.products li {
   width: fit-content;
 
   padding: 1em;
-  border: 0.4em;
-  border-style: groove;
+  border: groove;
   border-radius: 15px;
   margin: 0.2em;
-  background-color: rgb(184, 184, 184);
 }
-.product h2,
+.products .promotion {
+  border: groove rgb(173, 96, 245) 0.4em;
+}
+.promotion p {
+  text-shadow: 1px 1px 2px black, 0 0 1em blueviolet, 0 0 0.2em blueviolet;
+}
+.products li h2,
 h3,
 p {
   font-size: 1.5em;
   margin: 0.2em;
 }
-.product img {
+.products li img {
   height: 10em;
   width: 10em;
   margin: 0px;
 }
 ul {
   display: flex;
+  justify-content: center;
   list-style: none;
 }
