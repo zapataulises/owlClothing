@@ -6,7 +6,7 @@
     <img [src]="shoe.image" [alt]="shoe.model" />
     <p>
       {{ shoe.price | currency }}
-      <button class="btn btn-light btn-outline-dark">
+      <button class="btn btn-light btn-outline-dark" (click)="addCart(shoe)">
         <img src="assets/img/cart.png" alt="" />
       </button>
     </p>
