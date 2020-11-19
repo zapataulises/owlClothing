@@ -4,6 +4,11 @@
     <h2>{{ shoe.brand }}</h2>
     <h3>{{ shoe.model }}</h3>
     <img [src]="shoe.image" [alt]="shoe.model" />
-    <p>{{ shoe.price | currency }} <button>S</button></p>
+    <p>
+      {{ shoe.price | currency }}
+      <button class="btn btn-light btn-outline-dark">
+        <img src="assets/img/cart.png" alt="" />
+      </button>
+    </p>
   </li>
 </ul>

@@ -17,22 +17,14 @@
     id="navbarNavAltMarkup"
   >
     <div class="navbar-nav">
-      <a class="nav-link active" href="#"
+      <a class="nav-link active" [routerLink]="['/']"
         >Home <span class="sr-only">(current)</span></a
       >
-      <a class="nav-link" href="#">Nosotros</a>
-      <a class="nav-link" href="#">Contacto</a>
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-        >Disabled</a
-      >
+      <a class="nav-link" [routerLink]="['/contact']">Contacto</a>
     </div>
   </div>
 </nav>
 
 <div class="container">
-  <div>
-    <div>
-      <app-shoes-list></app-shoes-list>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
