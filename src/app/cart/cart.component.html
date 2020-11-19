@@ -1,5 +1,7 @@
 <div class="cart fixed-bottom">
   <p>Carrito:</p>
-  <div></div>
-  <button class="btn btn-success">Comprar</button>
+  <ul>
+    <li *ngFor="let shoe of wishList">{{ shoe.brand }} {{ shoe.model }}</li>
+  </ul>
+  <button class="btn btn-success btn-sm">Comprar</button>
 </div>

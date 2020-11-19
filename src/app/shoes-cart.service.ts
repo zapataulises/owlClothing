@@ -1,19 +1,22 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { shoe } from './shoes-list/shoe';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ShoesCartService {
-  wishList: shoe[] = [];
+  private _wishList: shoe[] = [];
+  wishList: BehaviorSubject<shoe[]> = new BehaviorSubject([]);
 
   constructor() {}
 
   addCart(shoes: shoe) {
-    let item: shoe = this.wishList.find((v1) => v1.model == shoes.model);
+    let item: shoe = this._wishList.find((v1) => v1.model == shoes.model);
     if (!item) {
-      this.wishList.push(shoes);
+      this._wishList.push(shoes);
     }
-    console.log(this.wishList);
+    console.log(this._wishList);
+    this.wishList.next(this._wishList);
   }
 }
